@@ -5,6 +5,7 @@ const BookingsForm = ({addBooking}) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    check_in: false
   })
 
   const onChange = (e) =>{
@@ -21,7 +22,8 @@ const BookingsForm = ({addBooking}) => {
 
     setFormData({
       name: "",
-      email: ""
+      email: "",
+      check_in: false
     });
   }
 
@@ -46,7 +48,14 @@ const BookingsForm = ({addBooking}) => {
           name="email"
           value={formData.email} />
       </div>
-
+      <div className="formWrap">
+        <input 
+        onChange={onChange}
+        type="checkbox"
+        id="check-in"
+        name="check-in"
+        value={formData.check_in} />
+      </div>
       <input type="submit" value="Save" id="save"/>
     </form>
   );
