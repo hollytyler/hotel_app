@@ -27,7 +27,7 @@ const BookingsForm = ({addBooking}) => {
 
   return (
     <form onSubmit={onSubmit} id="bookings-form">
-      <h2> Add aBooking</h2>
+      <h2> Add a Booking</h2>
       <div className="formWrap">
         <label htmlFor="name">Name</label>
         <input

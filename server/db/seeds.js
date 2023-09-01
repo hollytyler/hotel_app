@@ -12,4 +12,3 @@ db.bookings.insertMany([
   }
 ]);
 
-console.log(bookings)
