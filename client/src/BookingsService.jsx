@@ -14,6 +14,14 @@ export const postBooking = (payload) => {
   .then(res => res.json())
 }
 
+export const newCheckedInStatus = (id) => {
+  return fetch(baseURL + id, {
+    method: 'PUT',
+    body: JSON.stringify({checked_in, newCheckedInStatus}),
+    headers: {'Content-Type': 'application/json'}
+  })
+}
+
 export const deleteBooking = (id) => {
   return fetch(baseURL + id, {
     method: 'DELETE'

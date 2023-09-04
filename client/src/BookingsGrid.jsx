@@ -6,6 +6,7 @@ const BookingsGrid = ({bookings, removeBooking}) => {
 
   return (
     <>
+    <h1>Booking List</h1>
       {bookingslist}
     </>
   );

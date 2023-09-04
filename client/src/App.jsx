@@ -19,12 +19,14 @@ function App() {
   const addBooking = (booking) => {
     setForBookings([...forBookings, booking]);
   }
+  
 
   const removeBooking = (id) => {
     const bookingsToKeep = forBookings.filter(booking => booking._id !== id)
     setForBookings(bookingsToKeep);
   }
 
+  if (!forBookings) return <h2>Sorry No Bookings</h2>
   return (
     <>
       <BookingsForm addBooking={addBooking} />

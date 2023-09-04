@@ -20,6 +20,11 @@ const BookingsForm = ({addBooking}) => {
       addBooking(data);
     })
 
+  // const onClick = (e) =>{
+  //   newCheckedInStatus(formData).then((data)=>{
+  //     toggleCheckedInStatus(data)
+  //   })
+
     setFormData({
       name: "",
       email: "",
@@ -31,7 +36,7 @@ const BookingsForm = ({addBooking}) => {
     <form onSubmit={onSubmit} id="bookings-form">
       <h2> Add a Booking</h2>
       <div className="formWrap">
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Guest Name</label>
         <input
           onChange={onChange}
           type="text"
@@ -40,7 +45,7 @@ const BookingsForm = ({addBooking}) => {
           value={formData.name} />
       </div>
       <div className="formWrap">
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">Guest Email</label>
         <input
           onChange={onChange}
           type="text"
@@ -49,8 +54,9 @@ const BookingsForm = ({addBooking}) => {
           value={formData.email} />
       </div>
       <div className="formWrap">
+        <label htmlFor="checked-in">Checked in?</label>
         <input 
-        onChange={onChange}
+        onChange={onClick}
         type="checkbox"
         id="check-in"
         name="check-in"

@@ -1,4 +1,4 @@
-import { deleteBooking } from "./BookingsService"
+import { deleteBooking, newCheckedInStatus } from "./BookingsService"
 
 const BookingCard = ({booking, removeBooking}) => {
   
@@ -8,17 +8,14 @@ const BookingCard = ({booking, removeBooking}) => {
     })
   }
 
-  const handleCheckIn = () => {
-    checkedIn(booking._id).then(() =>{
-      selectCheckIn(booking._id);
-    })
-  }
+  const toggleCheckedInStatus = (_id, checked_in) => {
+    newCheckedInStatus = !checked_in; }
 
   return (
     <>
       <h1>Name: {booking.name}</h1>
       <h3>{booking.email}</h3>
-      <button onClick={handleCheckIn}>Check Out</button>
+      <button onClick={toggleCheckedInStatus}>Check Out</button>
       <button onClick={handleDelete}>Delete</button>
       <hr></hr>
     </>
