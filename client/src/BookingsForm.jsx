@@ -56,7 +56,7 @@ const BookingsForm = ({addBooking}) => {
       <div className="formWrap">
         <label htmlFor="checked-in">Checked in?</label>
         <input 
-        onChange={onClick}
+        onChange={onChange}
         type="checkbox"
         id="check-in"
         name="check-in"
